@@ -1,4 +1,13 @@
-.valign-wrapper {
+.login {
   background: lightgrey;
   height: 92vh;
+}
+.calendarPage {
+  background: lightgrey;
+}
+.calendar {
+  border: 2px black solid;
+  padding: 10px;
+  background: white;
+  height: 100%;
 }
