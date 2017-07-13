@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-  <head>
+  <!-- <head>
     <title>Checker Inner</title>
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.css' />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -70,6 +70,54 @@
     </script>
     <script type="text/javascript"
       src='    https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.4.0/fullcalendar.min.js'>
-    </script>
-  </body>
+    </script>-->
+
+  <head>
+    <meta charset="utf-8">
+    <title>Checker Inner</title>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://unpkg.com/react@15.3.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.3.2/dist/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"> </script>
+
+  <style>
+    #container {
+      padding: 50px;
+      background-color: #fff;
+    }
+  </style>
+
+  </head>
+  <body>
+    <div id='container'></div>
+    <script type='text/babel'>
+      const destination = document.querySelector('#container');
+
+      let DaySquare = React.createClass({
+        render: function() {
+          return (
+            <div className = "card-panel">
+            Date
+            </div>
+          );
+        }
+      });
+
+      ReactDOM.render(
+        <div>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+          <DaySquare></DaySquare>
+        </div>,
+        destination
+      );
+
+      </script>
+</body>
 </html>
