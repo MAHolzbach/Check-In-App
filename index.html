@@ -84,7 +84,8 @@
 
   <style>
     #container {
-      padding: 50px;
+      display: flex;
+      padding: 25px;
       background-color: #fff;
     }
   </style>
@@ -97,23 +98,28 @@
 
       let DaySquare = React.createClass({
         render: function() {
+          let squareStyle = {
+            width: 200,
+            height: 200,
+            backgroundColor: '#4285f4'
+          }
           return (
-            <div className = "card-panel">
+            <div className = "card-panel" style={squareStyle}>
             Date
             </div>
           );
         }
       });
 
+      let daysRender = [];
+
+      for(var i = 0; i < 30; i++) {
+        daysRender.push(<DaySquare key={daysRender[i]}/>);
+      };
+
       ReactDOM.render(
-        <div>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
-          <DaySquare></DaySquare>
+        <div style={{flex: 1, display: 'flex', flexWrap: 'wrap'}}>
+          {daysRender}
         </div>,
         destination
       );
